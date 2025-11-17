@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piero Jose Guille Soaña</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #220000, #0a0000 70%);
+      color: #ffbfbf;
+      overflow-x: hidden;
+    }
+
+    .glow-red {
+      text-shadow: 0 0 8px #ff4040, 0 0 14px #d10000;
+    }
+
+    header {
+      background: rgba(20, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 1.3rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 80, 80, 0.4);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      color: #ff4040;
+      letter-spacing: 1px;
+      animation: glowPulse 3s infinite alternate;
+    }
+
+    nav a {
+      color: #ffbfbf;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: 0.35s ease;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #ff4040;
+      border-bottom: 2px solid #ff4040;
+      text-shadow: 0 0 8px #ff4040;
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1000px;
+      padding: 5rem 2rem;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #ff4040;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-shadow: 0 0 10px #bf0000;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    .hero img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff4040;
+      box-shadow: 0 0 30px rgba(255, 30, 30, 0.5);
+      transition: transform .6s ease, box-shadow .6s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.17) rotate(4deg);
+      box-shadow: 0 0 40px rgba(255, 60, 60, 0.9);
+    }
+
+    .hero p {
+      color: #ffbfbf;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.6rem;
+      background: linear-gradient(90deg, #ff3030, #a00000);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 14px rgba(255, 50, 50, 0.6);
+      transition: .4s ease;
+    }
+
+    .btn:hover {
+      transform: rotate(-3deg) scale(1.07);
+      box-shadow: 0 0 25px rgba(255, 60, 60, 1);
+    }
+
+    .lista {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .lista li {
+      background: rgba(30, 0, 0, 0.6);
+      border: 1px solid rgba(255, 50, 50, 0.25);
+      padding: 1.2rem;
+      border-radius: 14px;
+      color: #ffbfbf;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+      transition: 0.35s ease;
+    }
+
+    .lista li:hover {
+      transform: translateY(-7px) scale(1.04);
+      box-shadow: 0 0 25px rgba(255, 60, 60, 0.8);
+      border-color: rgba(255, 100, 100, 0.6);
+    }
+
+    .lista a {
+      color: #ffbfbf;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .lista a:hover {
+      color: #ff4040;
+      text-shadow: 0 0 10px #ff4040;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(20, 0, 0, 0.6);
+      color: #ffbfbf;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255, 40, 40, 0.4);
+      box-shadow: 0 -5px 18px rgba(255, 20, 20, 0.25);
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px #ff4040; }
+      100% { text-shadow: 0 0 12px #ff0000; }
+    }
+
+    @keyframes flameFloat {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    .flame {
+      animation: flameFloat 4s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+      Me gusta jugar videojuegos (Sekiro, Genshin Impact, Deceit, Predator, Left4Dead), programar, tomar café,
+      los cachorros, el oro y la plata, y los colores azul, negro, dorado y rojo.
+      También disfruto la música rock, heavy metal y otros géneros según mi estado de ánimo.
+      Me gusta leer libros de aventura, drama y comedia.
+      Un dato curioso sobre mí: soy un ser con demasiada suerte.
+    </p>
+  </section>
+
+
+</body>
+</html>
